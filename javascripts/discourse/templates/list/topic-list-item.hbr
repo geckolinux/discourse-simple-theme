@@ -1,14 +1,14 @@
 {{~raw-plugin-outlet name="topic-list-before-columns"}}
 
 {{#if bulkSelectEnabled}}
-  <td class="bulk-select topic-list-data">
+  <div class="bulk-select topic-list-data">
     <label for="bulk-select-{{topic.id}}">
       <input type="checkbox" class="bulk-select" id="bulk-select-{{topic.id}}">
     </label>
-  </td>
+  </div>
 {{/if}}
 
-<td class='main-link clearfix topic-list-data'>
+<div class='main-link clearfix topic-list-data'>
   {{~raw-plugin-outlet name="topic-list-before-status"}}
   {{raw "topic-status" topic=topic}}
   {{~topic-link topic class="raw-link raw-topic-link"}}
@@ -30,31 +30,31 @@
     {{~/if ~}}
     {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
   </div>
-</td>
+</div>
 
 {{#if showLikes}}
-  <td class="num likes topic-list-data">
+  <div class="num likes topic-list-data">
     {{#if hasLikes}}
       <a href='{{topic.summaryUrl}}'>
         {{number topic.like_count}} {{d-icon "heart"}}
       </a>
     {{/if}}
-  </td>
+  </div>
 {{/if}}
 
 {{#if showOpLikes}}
-  <td class="num likes topic-list-data">
+  <div class="num likes topic-list-data">
     {{#if hasOpLikes}}
       <a href='{{topic.summaryUrl}}'>
         {{number topic.op_like_count}} {{d-icon "heart"}}
       </a>
     {{/if}}
-  </td>
+  </div>
 {{/if}}
 
 {{raw "list/posts-count-column" topic=topic}}
 
-<td class="last-post topic-list-data">
+<div class="last-post topic-list-data">
   <div class='poster-avatar'>
     <a href="{{topic.lastPostUrl}}" data-user-card="{{topic.last_poster_username}}">{{avatar topic.lastPosterUser imageSize="medium"}}</a>
   </div>
@@ -64,4 +64,4 @@
     </a>
     <span class='editor'><a href="/users/{{topic.last_poster_username}}" data-auto-route="true" data-user-card="{{topic.last_poster_username}}">{{topic.last_poster_username}}</a></span>
   </div>
-</td>
+</div>

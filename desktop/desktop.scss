@@ -2,10 +2,6 @@
   background-color: var(--secondary);
 }
 
-.topic-list > .topic-list-body .topic-list-item:not(.last-visit):not(.topic-list-item-separator) .topic-list-data {
-  border-bottom: 1px solid var(--primary-low);
-}
-
 .topic-list .topic-list-data a.title:not(.badge-notification) {
   color: var(--simple-theme-link-color);
   font-weight: normal;
@@ -74,7 +70,7 @@
     a.heatmap-high {
       color: #c66 !important;
     }
-    width: 100px;
+    width: 110px;
   }
 }
 
@@ -118,7 +114,7 @@
 }
 
 .topic-list .posts {
-  width: auto;
+  width: 110px;
 }
 
 /* topic page */
